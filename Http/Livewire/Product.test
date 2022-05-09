@@ -1,0 +1,40 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Shop\Http\Livewire;
+
+use Livewire\Component;
+
+class Product extends Component {
+    public $product;
+
+    /*
+     * Undocumented function.
+     *
+     * @return void
+     */
+
+    public function mount($row) {
+        $this->product = $row;
+    }
+
+    /**
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    /**
+     * Render the component.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function render() {
+        $view = 'shop::livewire.product';
+
+        $view_params = [
+            'view' => $view,
+            'product' => $this->product,
+        ];
+
+        return view($view, $view_params);
+    }
+}

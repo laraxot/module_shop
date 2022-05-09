@@ -1,0 +1,35 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Modules\Shop\Http\Controllers;
+
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Modules\Shop\Models\Profile;
+
+class ProfileController extends Controller {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Renderable
+     */
+    public function index() {
+        return view('pub_theme::profile.index');
+    }
+
+    public function store(Request $request) {
+        $profile = new Profile();
+
+        $profile->description = $request->description;
+
+        session(['profile' => $profile]);
+
+        return view('pub_theme::profile.index');
+    }
+
+    public function out() {
+        return view('pub_theme::profile.index');
+    }
+}
