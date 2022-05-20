@@ -1,0 +1,3 @@
+<div>
+    test livewire
+</div>

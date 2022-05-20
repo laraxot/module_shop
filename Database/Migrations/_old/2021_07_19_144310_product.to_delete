@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+
+use Modules\Shop\Models\Product as MyModel;
+
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+
+class Product extends XotBaseMigration {
+    
+    public function up() {
+        if (! $this->tableExists()) {
+            $this->getConn()->create(
+                $this->getTable(),
+                function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('description');
+                $table->integer('price');
+                $table->integer('category_id');
+                $table->integer('product_code');
+                $table->integer('subcategory_code');
+                $table->string('img');
+                $table->string('recipe');
+               
+                $table->string('created_by')->nullable();
+                $table->string('updated_by')->nullable();
+                $table->timestamps();
+            });
+        }
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists($this->getTable());
+    }
+}

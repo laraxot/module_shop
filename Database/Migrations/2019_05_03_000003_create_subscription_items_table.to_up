@@ -1,0 +1,41 @@
+<?php
+
+declare(strict_types=1);
+
+//namespace Modules\Shop\Database\Migrations;
+
+use Illuminate\Database\Schema\Blueprint;
+use Modules\Xot\Database\Migrations\XotBaseMigration;
+
+class CreateSubscriptionItemsTable extends XotBaseMigration {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up() {
+        //-- CREATE --
+        $this->tableCreate(
+            function (Blueprint $table) {
+                $table->bigIncrements('id');
+                $table->unsignedBigInteger('subscription_id');
+                $table->string('stripe_id')->index();
+                $table->string('stripe_plan');
+                $table->integer('quantity');
+                $table->timestamps();
+
+                $table->unique(['subscription_id', 'stripe_plan']);
+            });
+
+        //-- UPDATE --
+        $this->tableUpdate(
+            function (Blueprint $table) {
+                /*
+                if ($this->hasColumn('auth_user_id') && ! $this->hasColumn('user_id')) {
+                    $table->renameColumn('auth_user_id', 'user_id');
+                }
+                */
+            }
+        );
+    }
+}

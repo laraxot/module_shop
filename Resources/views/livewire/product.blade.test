@@ -1,0 +1,11 @@
+<div>
+    @component('theme::components.modal.simple',
+      ['guid'=>'modal_show_product','title'=>'il tuo carrello', 'size' => 'lg'])
+    @slot('content')
+      livewire product render blade
+    @endslot
+    @slot('btns')
+
+    @endslot
+  @endcomponent
+</div>

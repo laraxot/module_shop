@@ -1,0 +1,45 @@
+<?php
+
+namespace Modules\Shop\Http\Livewire\Settings\Legal;
+
+use Livewire\Component;
+use Modules\Shop\Models\Shop\Legal;
+use Modules\Shop\Traits\WithLegalActions;
+
+class Privacy extends Component
+{
+    use WithLegalActions;
+
+    /**
+     * Legal page title.
+     */
+    public string $title = 'Privacy policy';
+
+    /**
+     * Component mount instance.
+     */
+    public function mount()
+    {
+        $legal = Legal::query()->where('slug', str_slug($this->title))->first();
+
+        $this->initializeValues($legal);
+    }
+
+    /**
+     * Store/Update data from storage.
+     */
+    public function store()
+    {
+        $this->storeValues($this->title, $this->content, $this->isEnabled);
+
+        $this->notify([
+            'title' => __('Updated'),
+            'message' => __('Your privacy policy has been successfully updated!'),
+        ]);
+    }
+
+    public function render()
+    {
+        return view('shopper::livewire.settings.legal.privacy');
+    }
+}
