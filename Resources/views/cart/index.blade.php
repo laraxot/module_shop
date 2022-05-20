@@ -1,1 +1,0 @@
-@livewire('shop::cart_list')
