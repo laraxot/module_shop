@@ -116,7 +116,7 @@ class Product extends Model implements ReviewRateable {
     //use HasSlug;
     use CanHaveDiscount;
     use SoftDeletes;
-    use SoftCascadeTrait;
+    //use SoftCascadeTrait;
     use ReviewRateableTrait;
 
     /**

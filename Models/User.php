@@ -67,7 +67,7 @@ class User extends Authenticatable {
     use CanHaveDiscount;
     use SoftDeletes;
     use TwoFactorAuthenticatable;
-    use Billable;
+    //use Billable;
 
     /**
      * The attributes that are mass assignable.
