@@ -118,7 +118,7 @@ class UserPanel extends XotBasePanel {
   ),
   3 => 
   (object) array(
-     'type' => 'Datetime',
+     'type' => 'DateDateTime',
      'name' => 'email_verified_at',
      'comment' => NULL,
   ),
@@ -137,13 +137,13 @@ class UserPanel extends XotBasePanel {
   ),
   6 => 
   (object) array(
-     'type' => 'Datetime',
+     'type' => 'DateDateTime',
      'name' => 'created_at',
      'comment' => NULL,
   ),
   7 => 
   (object) array(
-     'type' => 'Datetime',
+     'type' => 'DateDateTime',
      'name' => 'updated_at',
      'comment' => NULL,
   ),

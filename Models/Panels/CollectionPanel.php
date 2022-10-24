@@ -117,7 +117,7 @@ class CollectionPanel extends XotBasePanel {
   ),
   3 => 
   (object) array(
-     'type' => 'Datetime',
+     'type' => 'DateDateTime',
      'name' => 'published_at',
      'rules' => 'required',
      'comment' => NULL,

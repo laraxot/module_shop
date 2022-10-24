@@ -173,14 +173,14 @@ class DiscountPanel extends XotBasePanel {
   ),
   11 => 
   (object) array(
-     'type' => 'Datetime',
+     'type' => 'DateDateTime',
      'name' => 'start_at',
      'rules' => 'required',
      'comment' => NULL,
   ),
   12 => 
   (object) array(
-     'type' => 'Datetime',
+     'type' => 'DateDateTime',
      'name' => 'end_at',
      'comment' => NULL,
   ),

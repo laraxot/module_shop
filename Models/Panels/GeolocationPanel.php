@@ -104,19 +104,19 @@ class GeolocationPanel extends XotBasePanel {
   ),
   1 => 
   (object) array(
-     'type' => 'Datetime',
+     'type' => 'DateDateTime',
      'name' => 'created_at',
      'comment' => NULL,
   ),
   2 => 
   (object) array(
-     'type' => 'Datetime',
+     'type' => 'DateDateTime',
      'name' => 'updated_at',
      'comment' => NULL,
   ),
   3 => 
   (object) array(
-     'type' => 'Datetime',
+     'type' => 'DateDateTime',
      'name' => 'deleted_at',
      'comment' => NULL,
   ),

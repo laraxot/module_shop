@@ -125,13 +125,13 @@ class PermissionPanel extends XotBasePanel {
   ),
   4 => 
   (object) array(
-     'type' => 'Datetime',
+     'type' => 'DateDateTime',
      'name' => 'created_at',
      'comment' => NULL,
   ),
   5 => 
   (object) array(
-     'type' => 'Datetime',
+     'type' => 'DateDateTime',
      'name' => 'updated_at',
      'comment' => NULL,
   ),
